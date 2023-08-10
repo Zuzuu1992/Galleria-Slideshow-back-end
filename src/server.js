@@ -12,6 +12,7 @@ connect();
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use("/images", express.static("public/images"));
 
 app.use("/api", PaintingRouter);
 app.use("/", ...swaggerMiddleware());
